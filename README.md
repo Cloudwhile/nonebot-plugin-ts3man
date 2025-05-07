@@ -1,8 +1,10 @@
-<div align=“center”>
+<div align="center">
 
 # Nonebot Plugin TS3MAN
 
-<a href="https://www.codefactor.io/repository/github/cloudwhile/nonebot-plugin-ts3man"><img src="https://www.codefactor.io/repository/github/cloudwhile/nonebot-plugin-ts3man/badge" alt="CodeFactor" /></a>
+<a href="https://www.codefactor.io/repository/github/cloudwhile/nonebot-plugin-ts3man">
+<img src="https://www.codefactor.io/repository/github/cloudwhile/nonebot-plugin-ts3man/badge" alt="CodeFactor" />
+</a>
 
 <a href="https://github.com/Cloudwhile/nonebot-plugin-ts3man/activity">
   <img src="https://img.shields.io/github/last-commit/Cloudwhile/nonebot-plugin-ts3man/master" alt="Last Commit"/>
