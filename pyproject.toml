@@ -4,6 +4,10 @@ version = "0.1.0"
 description = "TS3 管理插件"
 readme = "README.md"
 requires-python = ">=3.12"
+license = "Apache-2.0"
+authors = [
+    { name = "Cloudwhile", email = "supercat@icetowne.com" },
+]
 dependencies = [
     "annotated-types==0.7.0",
     "anyio==4.9.0",
