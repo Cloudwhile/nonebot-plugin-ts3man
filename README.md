@@ -23,7 +23,7 @@
 已完成功能：
 
 - TeamSpeak服务器全览：仅超级用户可以通过私聊机器人以获得TeamSpeak服务器全览
-- TeamSpeak服务器在线成员：仅超级用户可以通过私聊机器人以获得TeamSpeak服务器在线人数
+- TeamSpeak服务器在线成员：仅超级用户可以通过私聊机器人以获得TeamSpeak服务器在线成员信息
 - TeamSpeak服务器列表：当前默认SID为1
 
 计划中功能：
