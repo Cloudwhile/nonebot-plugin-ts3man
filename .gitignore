@@ -5,7 +5,6 @@ venv/
 .env
 .vscode
 *.yaml
-*.txt
 
 *.python-version
 *.lock
