@@ -65,3 +65,9 @@
     nb plugin install nonebot-plugin-ts3man
 
 </details>
+
+
+
+## 外部文档
+
+[https://ts.docs.icetowne.com](https://ts.docs.icetowne.com) 
