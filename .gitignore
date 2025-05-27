@@ -8,3 +8,7 @@ venv/
 
 *.python-version
 *.lock
+
+
+#Test files
+test.py

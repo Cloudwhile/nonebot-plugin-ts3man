@@ -3,18 +3,45 @@ import time
 from nonebot import logger
 
 
-# 获取teamspeak服务器在线用户
-# 返回username(nickname),uid,client_id,online_time
-class online_users(object):
-    def __init__(self):
-        # 初始化连接参数
+class User:
+    """
+    Opreation of User
+    """
+
+    def __init__(self, ts3conn, uid):
+        self.ts3conn = ts3conn
+        self.uid = uid
+
+    def kick_channel(self, reason):
+        return self.ts3conn.clientkick(clid=self.uid, reasonid=4, reasonmsg=reason)
+
+    def kick_server(self, reason):
+        return self.ts3conn.clientkick(clid=self.uid, reasonid=5, reasonmsg=reason)
+
+    def ban(self, time, reason):
+        return self.ts3conn.banclient(clid=self.uid, time=time, banreason=reason)
+
+    def unban(self):
+        return self.ts3conn.bandel(self.uid)
+
+    def move(self, cid):
+        return self.ts3conn.client_move(self.uid, cid)
+
+
+class Server:
+    """
+    Opreations on the server
+    """
+
+    def __init__(self, ts3conn):
+        self.ts3conn = ts3conn
         self.error = ""
 
-    def get_online_users(self, ts3conn) -> list:
+    def get_online_users(self) -> list:
         # 获取在线用户信息
         try:
-            ts3conn.use(sid=1)
-            response = ts3conn.clientlist(
+            self.ts3conn.use(sid=1)
+            response = self.ts3conn.clientlist(
                 country=True, uid=True, times=True, voice=True, away=True
             )
 
@@ -41,7 +68,8 @@ class online_users(object):
 
 
 def get_online_users(ts3conn):
-    return online_users().get_online_users(ts3conn), online_users().error
+    server = Server(ts3conn)
+    return server.get_online_users(), server.error
 
 
 def timeformat(seconds):
